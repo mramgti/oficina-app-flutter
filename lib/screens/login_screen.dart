@@ -93,7 +93,7 @@ class LoginScreen extends StatelessWidget {
 
                 // Sign in Button
                 LoginButton(
-                    onTap: () => Navigator.pushNamed(context, routes.loginScreen)),
+                    onTap: () => Navigator.pushNamed(context, routes.menuScreen)),
               ],
             ),
           ),
