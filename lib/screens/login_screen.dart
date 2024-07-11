@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_oficina_app/components/general_text_field.dart';
 import 'package:flutter_oficina_app/components/login_button.dart';
+import 'package:flutter_oficina_app/routes/routes.dart' as routes;
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -16,7 +17,7 @@ class LoginScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.primary,
           leading: BackButton(
-            onPressed: () => Navigator.pushNamed(context, '/intro_screen'),
+            onPressed: () => Navigator.pushNamed(context, routes.introScreen),
           ),
         ),
         body: SafeArea(
@@ -29,7 +30,9 @@ class LoginScreen extends StatelessWidget {
                 // logo
                 Container(
                   padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(color: Theme.of(context).colorScheme.secondary, borderRadius: BorderRadius.circular(50)),
+                  decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.secondary,
+                      borderRadius: BorderRadius.circular(50)),
                   child: Icon(
                     Icons.person_2,
                     size: 100,
@@ -90,7 +93,7 @@ class LoginScreen extends StatelessWidget {
 
                 // Sign in Button
                 LoginButton(
-                    onTap: () => Navigator.pushNamed(context, '/login_screen')),
+                    onTap: () => Navigator.pushNamed(context, routes.loginScreen)),
               ],
             ),
           ),
