@@ -26,7 +26,7 @@ class MenuBox extends StatelessWidget {
             // Name
             Text(
               name,
-              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12),
+              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 10),
             )
           ],
         ),

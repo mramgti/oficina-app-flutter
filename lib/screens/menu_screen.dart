@@ -9,14 +9,15 @@ class MenuScreen extends StatelessWidget {
       'AGENDAMENTO',
       const Icon(
         Icons.calendar_month,
-        size: 55,
+        size: 25,
       )
     ],
-    ['REVISÃO', const Icon(Icons.build, size: 55)],
-    ['ESTOQUE', const Icon(Icons.inventory, size: 55)],
-    ['CLIENTES', const Icon(Icons.person_add_alt_1, size: 55)],
-    ['FUNCIONÁRIOS', const Icon(Icons.people_alt, size: 55)],
-    ['ADMIN', const Icon(Icons.key, size: 55)],
+    ['REVISÃO', const Icon(Icons.build, size: 25)],
+    ['ESTOQUE', const Icon(Icons.inventory, size: 25)],
+    ['CLIENTES', const Icon(Icons.person_add_alt_1, size: 25)],
+    ['FUNCIONÁRIOS', const Icon(Icons.people_alt, size: 25)],
+    ['FINANCEIRO', const Icon(Icons.attach_money, size: 25)],
+    ['ADMIN', const Icon(Icons.key, size: 25)],
   ];
 
   @override
@@ -34,12 +35,12 @@ class MenuScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Welcome
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Bem Vindo,'),
@@ -50,10 +51,23 @@ class MenuScreen extends StatelessWidget {
                       ],
                     ),
                     Icon(
-                      Icons.miscellaneous_services,
-                      size: 120,
+                      Icons.car_repair,
+                      size: 100,
+                      color: Theme.of(context).colorScheme.inversePrimary,
                     )
                   ],
+                ),
+              ),
+
+              const SizedBox(
+                height: 25,
+              ),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: Divider(
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                  thickness: 0.6,
                 ),
               ),
 
@@ -65,7 +79,7 @@ class MenuScreen extends StatelessWidget {
               Expanded(
                   child: GridView.builder(
                       itemCount: options.length,
-                      padding: const EdgeInsets.all(25),
+                      padding: const EdgeInsets.all(16),
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 3, childAspectRatio: 1 / 1.1),

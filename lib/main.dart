@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_oficina_app/screens/intro_screen.dart';
-import 'package:flutter_oficina_app/screens/login_screen.dart';
 import 'package:flutter_oficina_app/themes/light_theme.dart';
 import 'routes/routes.dart' as routes;
 
