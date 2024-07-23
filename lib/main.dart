@@ -4,7 +4,6 @@ import 'package:flutter_oficina_app/themes/light_theme.dart';
 import 'routes/routes.dart' as routes;
 
 
-
 void main() {
   runApp(const MainApp());
 }
