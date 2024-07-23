@@ -6,7 +6,8 @@ class Veiculos {
   String? marca;
   String? modelo;
   String? cor;
-  String? ano;
+  int? ano; // Alterado para int
+
   Veiculos({
     this.placa,
     this.marca,
@@ -15,13 +16,12 @@ class Veiculos {
     this.ano,
   });
 
-
   Veiculos copyWith({
     String? placa,
     String? marca,
     String? modelo,
     String? cor,
-    String? ano,
+    int? ano, // Alterado para int
   }) {
     return Veiculos(
       placa: placa ?? this.placa,
@@ -36,7 +36,7 @@ class Veiculos {
     return <String, dynamic>{
       'Placa': placa,
       'Marca': marca,
-      'modelo': modelo,
+      'Modelo': modelo,
       'Cor': cor,
       'Ano': ano,
     };
@@ -48,7 +48,7 @@ class Veiculos {
       marca: map['Marca'] != null ? map['Marca'] as String : null,
       modelo: map['Modelo'] != null ? map['Modelo'] as String : null,
       cor: map['Cor'] != null ? map['Cor'] as String : null,
-      ano: map['Ano'] != null ? map['Ano'] as String : null,
+      ano: map['Ano'] != null ? map['Ano'] as int : null, // Alterado para int
     );
   }
 
@@ -64,7 +64,7 @@ class Veiculos {
   @override
   bool operator ==(covariant Veiculos other) {
     if (identical(this, other)) return true;
-  
+
     return 
       other.placa == placa &&
       other.marca == marca &&
