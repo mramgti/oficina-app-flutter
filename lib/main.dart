@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_oficina_app/screens/intro_screen.dart';
-import 'package:flutter_oficina_app/screens/login_screen.dart';
 import 'package:flutter_oficina_app/themes/light_theme.dart';
+import 'routes/routes.dart' as routes;
 
 
 
@@ -18,11 +18,8 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const IntroScreen(),
       theme: lightTheme,
-      routes: {
-        '/intro_screen': (context) => const IntroScreen(),
-        '/login_screen': (context) => LoginScreen(),
-        // '/apphub': (context) => 
-      }
+      onGenerateRoute: routes.controller,
+      initialRoute: routes.introScreen,
     );
   }
 }

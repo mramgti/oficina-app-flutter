@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_oficina_app/routes/routes.dart' as routes;
 import 'package:flutter_oficina_app/components/general_button.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -41,7 +42,7 @@ class IntroScreen extends StatelessWidget {
               height: 15,
             ),
             GeneralButton(
-                onTap: () => Navigator.pushNamed(context, '/login_screen'),
+                onTap: () => Navigator.pushNamed(context, routes.loginScreen),
                 child: const Icon(Icons.arrow_forward))
           ],
         ),
